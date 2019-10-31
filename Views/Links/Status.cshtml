@@ -1,0 +1,43 @@
+@model CutitBz.Models.Link
+
+@{
+    ViewData["Title"] = "Link Status";
+}
+
+
+
+<div class="container">
+
+
+
+    <div class="link-form">
+
+
+            <h4 class="title"><img src="~/img/logo.png"></h4>
+
+            <form asp-action="GetStatus">
+                 <div class="cutit-form">
+                     <input type="text" asp-for="shortLink" placeholder="Enter the short link...">
+                 </div>
+                 <div class="cutit-form">
+                     <input type="text" asp-for="pin" placeholder="Enter the pin...">
+                 </div>
+                 <div class="cutit-form">
+                     <button type="submit"><i class="fas fa-chart-line"></i></button>
+                 </div>
+                 
+            </form>
+
+        <br>
+        <a asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Homepage</a>
+        <div class="form-footer">
+        <p>
+            Cut IT is a simple link shortener. Paste the link and get the short link. 
+        </p>
+
+        <span>Copyright &copy; 2019 cutit.bz | All rights reserved.</span>
+        </div>
+    </div>
+
+</div>
+

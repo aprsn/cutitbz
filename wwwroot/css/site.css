@@ -1,0 +1,37 @@
+﻿
+body { font-family: Helvetica; background-color: #222629 !important; } 
+
+body a { color: #86C232 !important; } 
+.container .link-form { position: absolute; top: calc(50% - 170px); left: 0; right: 0; text-align: center; } 
+.container .link-form input { width: 50%; height: 50px; border: none; border-top-left-radius: 5px; border-bottom-left-radius: 5px; padding: 0 5px 0 15px; } 
+ 
+.container .link-form button { width: 60px; height: 50px; border-bottom-right-radius: 5px; border-top-right-radius: 5px; background-color: #86C232; color: #fff; border: none; position: relative; bottom: -5px; right: 3px; font-weight: 600; font-size: 25px; padding: 3px 0 0 0; } 
+
+.container .link-form h4 { text-align: center; padding: 20px; font-size: 36px; } 
+
+.container .link-form .form-footer { text-align: center; padding: 50px; font-size: 12px; color: #6B6E70; } 
+
+.container .link-form .link-result { list-style: none; padding: 0; margin: 0; font-size: 23px; } 
+.container .link-form .link-result input.shortLink { height: 30px; max-width: 165px; border-radius: 5px; } 
+
+.alertbox { position: fixed; bottom: 15px; right: 15px; width: 300px; height: 40px; border-radius: 5px; line-height: 40px; text-align: center; color: #fff; -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.69); -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.69); box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.69); } 
+.alertbox.success { background-color: #61892F; } 
+.alertbox.error { background-color: #B23850; } 
+
+.cutit-form { display: block; margin-top: 10px; } 
+.cutit-form input[type="text"] { border-radius: 5px; width: 30%; } 
+.cutit-form button { border-radius: 5px; width: 100px !important; } 
+
+.bottom-menu { position: absolute; top: 160px; left: 0; width: 100%; text-align: center; color: #86c232; font-size: 15px; } 
+
+#linkAlert { display: block; position: absolute; top: 79px; left: 0; right: 0; font-size: 14px; }
+#linkAlert.invalid { color: #ce6a7e; }
+#linkAlert.valid { color: #86c232; }
+
+@media screen and (max-width: 500px) { 
+ .container .link-form { right: auto; } 
+ .container .link-form input { width: 60%; } 
+ .alertbox { right: 10px; left: 10px; width: auto; } 
+ .cutit-form { display: block; width: 100%; margin-bottom: 10px; } 
+ .cutit-form input[type="text"] { border-radius: 5px; } 
+}

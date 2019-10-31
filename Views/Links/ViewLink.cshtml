@@ -1,0 +1,54 @@
+@model CutitBz.Models.Link
+
+@{
+    ViewData["Title"] = "Link Detail";
+    ViewData["Link"] = @Html.DisplayFor(model => model.shortLink);
+}
+
+
+
+<div class="container">
+
+
+
+    <div class="link-form">
+
+
+            <h4 class="title"><img src="~/img/logo.png"></h4>
+            <ul class="link-result">
+                <li style="overflow: hidden; width: 100vw; white-space: nowrap; text-overflow: ellipsis">
+                <b>Full Link:</b> 
+                @Html.DisplayFor(model => model.fullLink) 
+                </li>
+                <li>
+                <b>Short Link:</b> 
+                <input class="shortLink" type="text" value="cutit.bz/@Html.DisplayFor(model => model.shortLink)" readonly>
+                </li>
+                <li><a href="#" onclick="copyLink();" style="font-size: 16px;"><i class="far fa-copy"></i> Copy Link</a></li>
+                <li>
+                    <b>*Status Pin:</b>
+                    @Html.DisplayFor(model => model.pin)
+
+                    <span style="display: block; font-size: 14px; color: #86c266; opacity: 0.7">Please note the status pin! </span>
+                    <span style="display: block; font-size: 14px; color: #6B6E70;">*You can use the status pin for displaying link stats.  </span>
+                </li>
+
+                <br>
+
+                    <a asp-controller="Links" asp-action="Status"><i class="fas fa-chart-line"></i> Link Status</a>
+
+                <br>
+                <a asp-controller="Home" asp-action="Index"><i class="fas fa-chevron-circle-left"></i> Go Back</a>
+            </ul>
+
+        <div class="form-footer">
+        <p>
+            Cut IT is a simple link shortener. Paste the link and get the short link. 
+        </p>
+
+        <span>Copyright &copy; 2019 cutit.bz | All rights reserved.</span>
+        </div>
+    </div>
+
+</div>
+

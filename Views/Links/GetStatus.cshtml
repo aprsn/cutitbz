@@ -1,0 +1,57 @@
+@model CutitBz.Models.Link
+
+@{
+    ViewData["Title"] = "Link Status";
+}
+
+
+
+<div class="container">
+
+
+
+    <div class="link-form">
+
+
+            <h4 class="title"><img src="~/img/logo.png"></h4>
+
+            <ul class="link-result">
+                <li>Link: 
+                    cutit.bz/@Html.DisplayFor(model => model.shortLink)
+                </li>
+                <li style="font-size: 13px; color: #b33838;">
+                    *Live Status...
+                </li>
+                <li>Total Click(s): 
+                    <span id="totalClick">
+                        @Html.DisplayFor(model => model.hits)
+                    </span>
+                </li>
+                <li>Total View(s): 
+                    <span id="totalView">
+                        @Html.DisplayFor(model => model.views)
+                    </span>
+                    
+                </li>
+            </ul>
+        <br>
+        <a asp-controller="Links" asp-action="Status"><i class="fas fa-chevron-circle-left"></i> Another Link</a>
+        <br>
+        <a asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Homepage</a>
+        <div class="form-footer">
+        <p>
+            Cut IT is a simple link shortener. Paste the link and get the short link. 
+        </p>
+
+        <span>Copyright &copy; 2019 cutit.bz | All rights reserved.</span>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/lib/signalr/signalr.min.js"></script>
+<script src="~/js/connection.js"></script>
+<script>
+createConnection("@Html.DisplayFor(model => model.shortLink)");
+</script>
+
